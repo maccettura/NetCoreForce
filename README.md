@@ -24,6 +24,7 @@ Full target list
 - .NET 7.0
 - .NET 8.0
 - .NET 9.0
+- .NET 10.0
 - .NET Framework 4.6.2
 - .NET Framework 4.7.2
 - .NET Framework 4.8
