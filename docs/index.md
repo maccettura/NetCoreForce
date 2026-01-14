@@ -6,47 +6,24 @@ _layout: landing
     - [NetcoreForce.Client](~/api/NetCoreForce.Client.yml)
 
 
-# NetCoreForce 
+# maccettura/NetCoreForce 
 
-## A .NET Salesforce REST API integration library
+A fork of https://github.com/anthonyreilly/NetCoreForce
+
+## A .NET Standard and .NET Core Salesforce REST API integration library
 *This project is not offered, sponsored, or endorsed by Salesforce.*
+
+![NuGet Downloads](https://img.shields.io/nuget/dt/NetCoreForce.Client)  
+
+[Documentation](https://anthonyreilly.github.io/NetCoreForce/)  
 
 ## Library Targets
 
-The primary target is .NET Standard 2.0 to provide the widest possible support. 
-- .NET Standard 2.0 for widest possible support including .NET Framework 4.6.1+ and .NET Core 2.0
-- .NET Standard 2.1 for newer .NET Core versions
-
-For more info on .NET Standard compatiblity [see the Microsoft documentation here](https://learn.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0)
-
 Full target list
-- .NET Standard 2.0
-- .NET Standard 2.1
-- .NET Core 3.1
-- .NET 5.0
-- .NET 6.0
-- .NET 7.0
 - .NET 8.0
 - .NET 9.0
-- .NET Framework 4.6.2
-- .NET Framework 4.7.2
-- .NET Framework 4.8
+- .NET 10.0
 
-All possible frameworks are specifically targeted so that conditional compilation can be done where required.
-
-Full tested support is for .NET Core 6.0 - 9.0 as tooling and tests target those.  
-Legacy .NET Frameworks are partially tested
-
-Full tested support is for .NET Core 6.0 - 9.0 as tooling and tests target those.
-
-![NuGet Downloads](https://img.shields.io/nuget/dt/NetCoreForce.Client)
-
-[GitHub Repository](https://github.com/anthonyreilly/NetCoreForce)  
-
-### NuGet Packages
-* [NetCoreForce.Client](https://www.nuget.org/packages/NetCoreForce.Client/)
-* [NetCoreForce.Models](https://www.nuget.org/packages/NetCoreForce.Models/)
-* [NetCoreForce.ModelGenerator](https://www.nuget.org/packages/NetCoreForce.ModelGenerator/)
 
 ### [CHANGELOG](CHANGELOG.md)  
 
@@ -56,35 +33,20 @@ CI dev:
 [![CI](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml)
 
 
+
 ### Projects in this solution:
 * [NetCoreForce.Client](src/NetCoreForce.Client)
     - Main library  
-* [NetCoreForce.Client.Tests](src/NetCoreForce.Client.Tests)
-    - Unit tests (offline/mocked)  
-* [NetCoreForce.FunctionalTests](src/NetCoreForce.FunctionalTests)
-    - Online Unit tests (Needs valid login credentials)  
-* [NetCoreForce.ModelGenerator](src/NetCoreForce.ModelGenerator)
-    - Check [README](src/NetCoreForce.ModelGenerator/README.md) for docs
-    - Optional custom dotnet-cli tool for code generation of custom objects/fields.  
-* [NetCoreForce.Models](src/NetCoreForce.Models)
-    - Check [README](src/NetCoreForce.Models/README.md) for docs
-    - Optional library with a set of pre-generated standard models  
-* [SampleConsole](src/SampleConsole)
-    - A simple .NET Core console app to demonstrate the library.
 
-
+### NuGet Packages
+* [NetCoreForce.Client](https://www.nuget.org/packages/NetCoreForce.Client/)
 
 ### Designed to minimize dependencies:
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) (JSON Serialization)
 * [System.Text.Encodings.Web](https://www.nuget.org/packages/System.Text.Encodings.Web) (URL formatting)
-* [Microsoft.Bcl.AsyncInterfaces](https://www.nuget.org/packages/Microsoft.Bcl.AsyncInterfaces/)
-    - Only included in .netstandard2.0, .netcoreapp2.0 targets
-    - Provides await using, async disposables
 
 (Migration from Newtonsoft.Json to System.Text.Json is planned)
 
 Feedback and suggestions welcome.
 
 Licensed under the MIT license.
-
-

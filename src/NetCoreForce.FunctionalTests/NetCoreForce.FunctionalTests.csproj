@@ -37,7 +37,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetCoreForce.Client\NetCoreForce.Client.csproj" />
-    <ProjectReference Include="..\NetCoreForce.Models\NetCoreForce.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
