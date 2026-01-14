@@ -1,9 +1,11 @@
 # Changelog
 
-### 2026-01-14 v5.1.0
+### 2026-01-14 v5.2.0
 
 * removed: Support for legacy .NET framework has been removed, only targeting .NET 8, 9 & 10
-* 
+* removed: ModelGenerator and Models packages
+* removed: All projects besides NetForceCore.Client to hyper focus on improvements
+* added: Overload to ForceClient to allow for CompositeQueries to be created more easily
 
 ## Pre-fork
 
