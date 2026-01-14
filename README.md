@@ -5,7 +5,7 @@ A fork of https://github.com/anthonyreilly/NetCoreForce
 ## A .NET Standard and .NET Core Salesforce REST API integration library
 *This project is not offered, sponsored, or endorsed by Salesforce.*
 
-![NuGet Downloads](https://img.shields.io/nuget/dt/NetCoreForce.Client)  
+![NuGet Downloads](https://img.shields.io/nuget/dt/Maccettura.NetCoreForce.Client)  
 
 [Documentation](https://anthonyreilly.github.io/NetCoreForce/)  
 
@@ -20,9 +20,9 @@ Full target list
 ### [CHANGELOG](CHANGELOG.md)  
 
 CI main:  
-[![CI](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml)  
+[![CI](https://github.com/maccettura/NetCoreForce/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/maccettura/NetCoreForce/actions/workflows/ci.yml)  
 CI dev:  
-[![CI](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/anthonyreilly/NetCoreForce/actions/workflows/ci.yml)
+[![CI](https://github.com/maccettura/NetCoreForce/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/maccettura/NetCoreForce/actions/workflows/ci.yml)
 
 
 
@@ -31,7 +31,7 @@ CI dev:
     - Main library  
 
 ### NuGet Packages
-* [NetCoreForce.Client](https://www.nuget.org/packages/NetCoreForce.Client/)
+* [Maccettura.NetCoreForce.Client](https://www.nuget.org/packages/Maccettura.NetCoreForce.Client/)
 
 ### Designed to minimize dependencies:
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) (JSON Serialization)
