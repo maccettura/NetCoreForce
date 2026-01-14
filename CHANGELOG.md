@@ -1,5 +1,12 @@
 # Changelog
 
+### 2026-01-14 v5.1.0
+
+* removed: Support for legacy .NET framework has been removed, only targeting .NET 8, 9 & 10
+* 
+
+## Pre-fork
+
 ### 2025-06-10 v5.0.0
 
 * feat: branched off and removed LINQ project, as it is unlikely to become production ready in the new future
