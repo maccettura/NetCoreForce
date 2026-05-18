@@ -12,6 +12,21 @@ namespace NetCoreForce.Client
     public static class UriFormatter
     {
         /// <summary>
+        /// Salesforce maximum URI length for REST API requests - arbitrary limit based on testing and documentation, not explicitly stated by Salesforce 
+        /// but recommended to be kept under 15,000 characters. Exceeding this limit may result in a 414 Request-URI Too Long error from the Salesforce API.
+        /// </summary>
+        public const int MaxUriLength = 15000;
+
+        private static Uri ValidateUriLength(Uri uri)
+        {
+            if (uri.AbsoluteUri.Length > MaxUriLength)
+            {
+                throw new ForceApiException($"The request URI exceeds the Salesforce maximum length of {MaxUriLength} characters (actual: {uri.AbsoluteUri.Length})", new List<string>()["Reduce the number of fields or simplify the query"], System.Net.HttpStatusCode.BadRequest);
+            }
+            return uri;
+        }
+
+        /// <summary>
         /// SF Base URI
         /// </summary>
         /// <param name="instanceUrl"></param>
@@ -175,7 +190,7 @@ namespace NetCoreForce.Client
                 uri = new Uri(QueryHelpers.AddQueryString(uri.ToString(), "fields", fieldList));
             }
 
-            return uri;
+            return ValidateUriLength(uri);
         }
 
         /// <summary>
@@ -363,7 +378,7 @@ namespace NetCoreForce.Client
             Uri uri = new Uri(BaseUri(instanceUrl), $"{apiVersion}/{queryType}");
             string queryUri = QueryHelpers.AddQueryString(uri.ToString(), "q", query);
 
-            return new Uri(queryUri);
+            return ValidateUriLength(new Uri(queryUri));
         }
 
         /// <summary>
@@ -374,7 +389,7 @@ namespace NetCoreForce.Client
             Uri uri = new Uri(BaseUri(instanceUrl), $"{apiVersion}/search");
             string searchUri = QueryHelpers.AddQueryString(uri.ToString(), "q", query);
 
-            return new Uri(searchUri);
+            return ValidateUriLength(new Uri(searchUri));
         }
 
         /// <summary>
